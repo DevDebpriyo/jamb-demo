@@ -1,5 +1,5 @@
 import { Star } from "lucide-react";
-import { defineField, defineType } from "sanity";
+import { defineField, defineType, defineArrayMember } from "sanity";
 
 import { imageWithAltField } from "@/schemaTypes/common";
 
@@ -17,7 +17,7 @@ export const heroJamb = defineType({
       description:
         "List of text links to display below the hero image (e.g., Fireplaces | Lighting | Furniture | Journal)",
       of: [
-        defineType({
+        defineArrayMember({
           type: "object",
           name: "linkItem",
           fields: [
