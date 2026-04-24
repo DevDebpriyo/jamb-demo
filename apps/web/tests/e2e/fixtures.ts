@@ -18,7 +18,7 @@ if (!projectId || !dataset) {
 const sanityClient = createClient({
   projectId,
   dataset,
-  apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION ?? "2024-01-01",
+  apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2024-01-01",
   useCdn: true,
 });
 
