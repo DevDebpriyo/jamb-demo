@@ -68,7 +68,7 @@ export function JournalNewsletter({
 
             {description && (
               <div className="text-base leading-relaxed text-muted-foreground md:text-lg">
-                <RichText richText={description} />
+                <RichText richText={description as any} />
               </div>
             )}
 
