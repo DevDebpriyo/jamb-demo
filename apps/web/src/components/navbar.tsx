@@ -170,12 +170,12 @@ export function Navbar({
           {/* Left Side: Jamb Logo */}
           <div className="flex items-center">
             <Link href="/">
-              <Image 
-                src="/Jamb Logo 1.png" 
-                alt="Jamb" 
-                width={120} 
-                height={40} 
-                className="h-8 w-auto object-contain" 
+              <Image
+                src="/Jamb Logo 1.png"
+                alt="Jamb"
+                width={120}
+                height={40}
+                className="h-8 w-auto object-contain"
                 priority
               />
             </Link>
@@ -183,13 +183,25 @@ export function Navbar({
 
           {/* Right Side: Icons */}
           <div className="flex items-center gap-4 text-muted-foreground">
-            <button type="button" aria-label="Search" className="hover:text-foreground transition-colors">
+            <button
+              type="button"
+              aria-label="Search"
+              className="hover:text-foreground transition-colors"
+            >
               <Search className="h-5 w-5" strokeWidth={1.5} />
             </button>
-            <button type="button" aria-label="Mail" className="hover:text-foreground transition-colors">
+            <button
+              type="button"
+              aria-label="Mail"
+              className="hover:text-foreground transition-colors"
+            >
               <Mail className="h-5 w-5" strokeWidth={1.5} />
             </button>
-            <button type="button" aria-label="Menu" className="hover:text-foreground transition-colors">
+            <button
+              type="button"
+              aria-label="Menu"
+              className="hover:text-foreground transition-colors"
+            >
               <Menu className="h-6 w-6" strokeWidth={1.5} />
             </button>
           </div>

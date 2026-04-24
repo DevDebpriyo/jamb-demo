@@ -14,7 +14,8 @@ export const heroJamb = defineType({
       name: "links",
       type: "array",
       title: "Navigation Links",
-      description: "List of text links to display below the hero image (e.g., Fireplaces | Lighting | Furniture | Journal)",
+      description:
+        "List of text links to display below the hero image (e.g., Fireplaces | Lighting | Furniture | Journal)",
       of: [
         defineType({
           type: "object",

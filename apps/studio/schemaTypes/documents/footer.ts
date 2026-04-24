@@ -86,7 +86,8 @@ const footerColumn = defineField({
       type: "text",
       title: "Top Text",
       rows: 3,
-      description: "Text appearing at the very top of the column (e.g. Address or Email)",
+      description:
+        "Text appearing at the very top of the column (e.g. Address or Email)",
     }),
     defineField({
       name: "showNewsletter",

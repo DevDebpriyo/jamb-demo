@@ -172,10 +172,7 @@ export function PageBuilder({
   }
 
   return (
-    <main
-      className="flex flex-col w-full"
-      data-sanity={containerDataAttribute}
-    >
+    <main className="flex flex-col w-full" data-sanity={containerDataAttribute}>
       {blocks.map(renderBlock)}
     </main>
   );

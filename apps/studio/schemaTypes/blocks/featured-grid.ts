@@ -15,8 +15,7 @@ const featuredGridCard = defineField({
       name: "aspectRatio",
       title: "Aspect Ratio",
       type: "string",
-      description:
-        "Choose the aspect ratio for this card's image display",
+      description: "Choose the aspect ratio for this card's image display",
       options: {
         list: [
           { title: "Square (1:1)", value: "square" },

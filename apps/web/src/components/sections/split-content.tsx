@@ -88,7 +88,7 @@ export function SplitContent({
           </motion.div>
 
           {/* Image */}
-          
+
           {image && imageSrc && (
             <motion.div
               className="relative aspect-[4/5] w-full rounded-sm z-10"

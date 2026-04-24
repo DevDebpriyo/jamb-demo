@@ -39,7 +39,10 @@ export async function FooterServer() {
     ]);
 
     if (!(response?.data && settingsResponse?.data)) {
-      console.log("Missing data:", { footer: !!response?.data, settings: !!settingsResponse?.data });
+      console.log("Missing data:", {
+        footer: !!response?.data,
+        settings: !!settingsResponse?.data,
+      });
       return <FooterSkeleton />;
     }
     return <Footer data={response.data} settingsData={settingsResponse.data} />;
@@ -164,7 +167,10 @@ function Footer({ data, settingsData }: FooterProps) {
         {Array.isArray(columns) && columns.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12">
             {columns.map((column, index) => (
-              <div key={`column-${column?._key}-${index}`} className="flex flex-col">
+              <div
+                key={`column-${column?._key}-${index}`}
+                className="flex flex-col"
+              >
                 {/* Top Section */}
                 <div className="min-h-[140px] mb-8">
                   {column.topText && (
@@ -183,7 +189,10 @@ function Footer({ data, settingsData }: FooterProps) {
                           placeholder="Search"
                           className="w-full bg-transparent px-3 py-2 text-sm outline-none font-serif text-foreground placeholder:text-muted-foreground/60"
                         />
-                        <button type="button" className="bg-background px-4 py-2 text-sm font-serif border-l text-muted-foreground hover:text-foreground transition-colors shrink-0">
+                        <button
+                          type="button"
+                          className="bg-background px-4 py-2 text-sm font-serif border-l text-muted-foreground hover:text-foreground transition-colors shrink-0"
+                        >
                           Subscribe
                         </button>
                       </div>
@@ -211,30 +220,31 @@ function Footer({ data, settingsData }: FooterProps) {
                             {group.title}
                           </h3>
                         )}
-                        {Array.isArray(group.links) && group.links.length > 0 && (
-                          <ul className="space-y-3 font-serif text-muted-foreground text-sm">
-                            {group.links.map((link, linkIndex) => (
-                              <li
-                                className="hover:text-foreground transition-colors"
-                                key={`${link?._key}-${linkIndex}`}
-                              >
-                                <Link
-                                  href={link.href ?? "#"}
-                                  rel={
-                                    link.openInNewTab
-                                      ? "noopener noreferrer"
-                                      : undefined
-                                  }
-                                  target={
-                                    link.openInNewTab ? "_blank" : undefined
-                                  }
+                        {Array.isArray(group.links) &&
+                          group.links.length > 0 && (
+                            <ul className="space-y-3 font-serif text-muted-foreground text-sm">
+                              {group.links.map((link, linkIndex) => (
+                                <li
+                                  className="hover:text-foreground transition-colors"
+                                  key={`${link?._key}-${linkIndex}`}
                                 >
-                                  {link.name}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
+                                  <Link
+                                    href={link.href ?? "#"}
+                                    rel={
+                                      link.openInNewTab
+                                        ? "noopener noreferrer"
+                                        : undefined
+                                    }
+                                    target={
+                                      link.openInNewTab ? "_blank" : undefined
+                                    }
+                                  >
+                                    {link.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                       </div>
                     ))}
                   </div>

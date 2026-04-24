@@ -34,14 +34,16 @@ export function HeroJamb({ image, links }: HeroJambProps) {
           <div className="mt-6 flex flex-wrap items-center justify-center text-muted-foreground font-serif">
             {links.map((link, index) => (
               <div key={link._key} className="flex items-center">
-                <Link 
-                  href={link.href || "#"} 
+                <Link
+                  href={link.href || "#"}
                   className="hover:text-foreground transition-colors font-medium text-lg px-2"
                 >
                   {link.label}
                 </Link>
                 {index < links.length - 1 && (
-                  <span className="text-muted-foreground/50 mx-2 text-lg">|</span>
+                  <span className="text-muted-foreground/50 mx-2 text-lg">
+                    |
+                  </span>
                 )}
               </div>
             ))}

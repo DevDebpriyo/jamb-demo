@@ -61,7 +61,8 @@ export function FeaturedGrid({ title, subtitle, cards }: FeaturedGridProps) {
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
       const clientWidth = scrollRef.current.clientWidth;
-      const scrollAmount = direction === "left" ? -clientWidth * 0.8 : clientWidth * 0.8;
+      const scrollAmount =
+        direction === "left" ? -clientWidth * 0.8 : clientWidth * 0.8;
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
@@ -69,7 +70,10 @@ export function FeaturedGrid({ title, subtitle, cards }: FeaturedGridProps) {
   const showNavigation = Array.isArray(cards) && cards.length > 5;
 
   return (
-    <section className="py-8 md:py-10 overflow-hidden bg-[#e3e2e2]" id="featured-grid">
+    <section
+      className="py-8 md:py-10 overflow-hidden bg-[#e3e2e2]"
+      id="featured-grid"
+    >
       <div className="w-full px-4 md:px-8 lg:px-12 relative">
         {/* Section Header */}
         <motion.div
@@ -100,7 +104,9 @@ export function FeaturedGrid({ title, subtitle, cards }: FeaturedGridProps) {
                   type="button"
                   className={cn(
                     "absolute -left-4 top-[35%] z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-background border border-border shadow-md transition-opacity duration-300 md:-left-5 lg:-left-6",
-                    canScrollLeft ? "opacity-100" : "opacity-0 pointer-events-none"
+                    canScrollLeft
+                      ? "opacity-100"
+                      : "opacity-0 pointer-events-none"
                   )}
                   onClick={() => scroll("left")}
                   aria-label="Scroll left"
@@ -111,7 +117,9 @@ export function FeaturedGrid({ title, subtitle, cards }: FeaturedGridProps) {
                   type="button"
                   className={cn(
                     "absolute -right-4 top-[35%] z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-background border border-border shadow-md transition-opacity duration-300 md:-right-5 lg:-right-6",
-                    canScrollRight ? "opacity-100" : "opacity-0 pointer-events-none"
+                    canScrollRight
+                      ? "opacity-100"
+                      : "opacity-0 pointer-events-none"
                   )}
                   onClick={() => scroll("right")}
                   aria-label="Scroll right"
@@ -129,9 +137,11 @@ export function FeaturedGrid({ title, subtitle, cards }: FeaturedGridProps) {
                       "grid gap-4 sm:gap-6 lg:gap-8 mx-auto items-stretch w-full",
                       cards.length === 1 && "grid-cols-1 max-w-sm",
                       cards.length === 2 && "grid-cols-2 max-w-4xl",
-                      cards.length === 3 && "grid-cols-2 md:grid-cols-3 max-w-7xl",
+                      cards.length === 3 &&
+                        "grid-cols-2 md:grid-cols-3 max-w-7xl",
                       cards.length === 4 && "grid-cols-2 md:grid-cols-4",
-                      cards.length === 5 && "grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+                      cards.length === 5 &&
+                        "grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
                     )
               )}
               ref={showNavigation ? scrollRef : undefined}
