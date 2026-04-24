@@ -11,6 +11,7 @@ export async function POST(req: NextRequest) {
 
     // Clear the cache for all Sanity queries using the 'sanity' tag
     // defineLive() automatically tags all requests with "sanity"
+    // @ts-expect-error - Next.js 16 typings currently require a 'profile' argument that is experimental
     revalidateTag("sanity");
     
     return NextResponse.json({
