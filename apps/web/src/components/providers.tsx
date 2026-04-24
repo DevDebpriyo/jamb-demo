@@ -11,10 +11,10 @@ export function Providers({ children }: PropsWithChildren) {
     <QueryClientProvider client={queryClient}>
       <NextThemesProvider
         attribute="class"
-        defaultTheme="system"
+        defaultTheme="light"
+        forcedTheme="light"
         disableTransitionOnChange
-        enableColorScheme
-        enableSystem
+        enableSystem={false}
       >
         {children}
       </NextThemesProvider>
