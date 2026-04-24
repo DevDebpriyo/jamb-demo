@@ -97,6 +97,7 @@ export function FeaturedGrid({ title, subtitle, cards }: FeaturedGridProps) {
             {showNavigation && (
               <>
                 <button
+                  type="button"
                   className={cn(
                     "absolute -left-4 top-[35%] z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-background border border-border shadow-md transition-opacity duration-300 md:-left-5 lg:-left-6",
                     canScrollLeft ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -107,6 +108,7 @@ export function FeaturedGrid({ title, subtitle, cards }: FeaturedGridProps) {
                   <ChevronLeft className="h-5 w-5" />
                 </button>
                 <button
+                  type="button"
                   className={cn(
                     "absolute -right-4 top-[35%] z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-background border border-border shadow-md transition-opacity duration-300 md:-right-5 lg:-right-6",
                     canScrollRight ? "opacity-100" : "opacity-0 pointer-events-none"

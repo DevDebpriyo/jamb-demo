@@ -47,7 +47,6 @@ export function JournalNewsletter({
   description,
   embeddedImage,
   placeholderText,
-  buttonText,
 }: JournalNewsletterProps) {
   return (
     <section className="py-16 md:py-24" id="journal-newsletter">

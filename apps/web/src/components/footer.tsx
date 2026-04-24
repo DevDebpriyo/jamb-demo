@@ -183,7 +183,7 @@ function Footer({ data, settingsData }: FooterProps) {
                           placeholder="Search"
                           className="w-full bg-transparent px-3 py-2 text-sm outline-none font-serif text-foreground placeholder:text-muted-foreground/60"
                         />
-                        <button className="bg-background px-4 py-2 text-sm font-serif border-l text-muted-foreground hover:text-foreground transition-colors shrink-0">
+                        <button type="button" className="bg-background px-4 py-2 text-sm font-serif border-l text-muted-foreground hover:text-foreground transition-colors shrink-0">
                           Subscribe
                         </button>
                       </div>

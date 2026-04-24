@@ -183,13 +183,13 @@ export function Navbar({
 
           {/* Right Side: Icons */}
           <div className="flex items-center gap-4 text-muted-foreground">
-            <button aria-label="Search" className="hover:text-foreground transition-colors">
+            <button type="button" aria-label="Search" className="hover:text-foreground transition-colors">
               <Search className="h-5 w-5" strokeWidth={1.5} />
             </button>
-            <button aria-label="Mail" className="hover:text-foreground transition-colors">
+            <button type="button" aria-label="Mail" className="hover:text-foreground transition-colors">
               <Mail className="h-5 w-5" strokeWidth={1.5} />
             </button>
-            <button aria-label="Menu" className="hover:text-foreground transition-colors">
+            <button type="button" aria-label="Menu" className="hover:text-foreground transition-colors">
               <Menu className="h-6 w-6" strokeWidth={1.5} />
             </button>
           </div>
